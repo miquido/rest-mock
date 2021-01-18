@@ -1,0 +1,3 @@
+rootProject.name='RestMock'
+include ':library'
+include ':sample'
