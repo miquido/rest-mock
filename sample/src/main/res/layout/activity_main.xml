@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/getAllCarsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get All Cars"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/getCarsFordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Cars (?make=Ford)"
+            app:layout_constraintStart_toEndOf="@id/getAllCarsButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/addCarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Car"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/getAllCarsButton" />
+
+        <Button
+            android:id="@+id/addCarErrorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Car (model=error)"
+            app:layout_constraintStart_toEndOf="@id/addCarButton"
+            app:layout_constraintTop_toTopOf="@id/addCarButton" />
+
+        <Button
+            android:id="@+id/getCarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Car"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addCarButton" />
+
+        <Button
+            android:id="@+id/getCarId3Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Car (id=3)"
+            app:layout_constraintStart_toEndOf="@id/getCarButton"
+            app:layout_constraintTop_toTopOf="@id/getCarButton" />
+
+        <Button
+            android:id="@+id/getCarId99Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Car (id=99)"
+            app:layout_constraintStart_toEndOf="@id/getCarId3Button"
+            app:layout_constraintTop_toTopOf="@id/getCarId3Button" />
+
+        <Button
+            android:id="@+id/updateCarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Car"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/getCarButton" />
+
+        <Button
+            android:id="@+id/updateCarId3Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Car (id=3)"
+            app:layout_constraintStart_toEndOf="@id/updateCarButton"
+            app:layout_constraintTop_toTopOf="@id/updateCarButton" />
+
+        <Button
+            android:id="@+id/updateCarErrorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Car (model=error)"
+            app:layout_constraintStart_toStartOf="@id/updateCarId3Button"
+            app:layout_constraintTop_toBottomOf="@id/updateCarId3Button" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/updateCarErrorButton" />
+
+        <TextView
+            android:id="@+id/requestTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Request:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <TextView
+            android:id="@+id/requestNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/requestTitleTextView"
+            app:layout_constraintTop_toTopOf="@id/requestTitleTextView"
+            tools:text="Get Cars" />
+
+        <TextView
+            android:id="@+id/statusTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Status:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/requestTitleTextView" />
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/statusTitleTextView"
+            app:layout_constraintTop_toTopOf="@id/statusTitleTextView"
+            tools:text="200" />
+
+        <TextView
+            android:id="@+id/responseTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Response:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusTitleTextView" />
+
+        <TextView
+            android:id="@+id/responseTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/responseTitleTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
