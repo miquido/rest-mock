@@ -13,7 +13,7 @@ repositories {
 }
 ```
 Add RestMock dependency:
-`implementation 'com.miquido:restmock:1.0.0'`
+`implementation 'com.miquido.restmock:restmock:1.0.0'`
 
 The best way to separate app build with mocked api is to create a flavor for it. Let's name it "devMock":
 
